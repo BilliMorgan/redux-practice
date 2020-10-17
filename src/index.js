@@ -9,12 +9,12 @@ import registerServiceWorker from "./registerServiceWorker";
 import counterReducer from "./store/reducers/counter";
 import resultReducer from "./store/reducers/result";
 
-const store = createStore(rootReducer);
 
 const rootReducer = combineReducers({
   ctr: counterReducer,
   res: resultReducer
 })
+const store = createStore(rootReducer);
 
 ReactDOM.render(
   <Provider store={store}>
